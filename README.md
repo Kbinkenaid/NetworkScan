@@ -127,15 +127,10 @@ You can change the destination using `--output-dir`, or disable saving with `--n
 - The script only applies `-Pn` (skip discovery) when explicitly requested (via `--skip-discovery` or high firewall profile) and when it won’t defeat a pure discovery scan.
 - Use `--no-dns` (adds `-n`) to speed up scans by disabling reverse DNS lookups.
 
-## Safety and legal
-Only scan systems and networks you own or are explicitly authorized to test. Unauthorized scanning can be illegal and disruptive.
 
 ## Troubleshooting
 - `nmap not found`: Install nmap (see Requirements) and ensure it is in your PATH.
 - Empty/partial results: Try `--timing T4` or remove `--skip-discovery`. Consider running with elevated privileges for SYN/OS detection.
 - Slow scans: Avoid `-p-` or large UDP scans; use `--top-ports` or `-F` and `--no-dns`.
 - XML parsing error: The script will fall back to parsing stdout. You can inspect the corresponding `.xml` in the results folder.
-
-## License
-This script is provided as-is, without warranty. Use responsibly and lawfully.
 
